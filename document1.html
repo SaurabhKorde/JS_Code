@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="myid">Hello Friends ...! 
+        </h1>
+        <p id="pid"></p>
+      <button onclick="changeContent(1)">Gray</button>
+      <button onclick="changeContent(2)">Yellow</button>
+      <button ><a href="./mynewpage.html">go to new page</a> </button>
+      <button onclick="openWindow()">Open</button>
+      <button onclick="closeWindow()">Close</button>
+    
+      <button onclick="forward()">forward</button>
+      <!-- <iframe src="https://open.spotify.com/" title="W3Schools Free Online Web Tutorials"> -->
+    </iframe>
+    
+        <script>
+
+
+                function back() {
+                    history.back()
+                }
+
+                function forward(params) {
+                    history.forward()
+                }
+                // open("https://open.spotify.com/","_Parent")
+            let id
+            console.log("innerHeight",window.innerHeight);
+            console.log("innerWidth",window.innerWidth);
+            
+            console.log("11111111111111");
+            setTimeout(timeCheck,5000);
+
+            function timeCheck (){
+               alert("2222222222222222");
+            }
+            console.log("3333333333333333");
+            function openWindow(params) {
+               id= open("https://open.spotify.com/","_blank")
+            }
+            function closeWindow(params) {
+               id.close();
+            }
+
+                function changeContent(num) {
+                    let myElement=document.getElementById("myid")
+                    let pid=document.getElementById("pid");
+                    
+                    if(num==1){
+                        // alert("Color is Gray...");
+                        // window.confirm("Color is Gray...")
+                        prompt("Hello.....")
+                         document.body.style.backgroundColor="gray"  
+                         pid.innerHTML="You have changed color.Color is Gray..." 
+                         myElement.innerHTML="Asha"
+                    }else{
+                        alert("Color is Yellow...!");
+                        confirm("Color is Yellow.........!")
+                        prompt("Welcome....!")
+                        document.body.style.backgroundColor="Yellow"   
+                        pid.innerHTML="Color is Yellow." 
+                        myElement.innerHTML="Deva"
+                    }
+                
+                }
+        </script>
+
+</body>
+</html>

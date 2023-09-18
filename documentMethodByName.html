@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        
+        Male:<input type="password" name="gender" value="male"><br><br>
+        
+        Female:<input type="password" name="gender" value="female"><br><br>
+        Female:<input type="password" name="gender1" value="female"><br><br>
+        Female:<input type="password" name="gender1" value="female"><br><br>
+        Female:<input type="password" name="gender" value="female"><br><br>
+        <input type="button" onclick="totalelements()" value="Total Genders">
+        
+        </form>
+
+        <script type="password/javascript">
+            function totalelements()
+            {
+            var allgenders=document.getElementsByName("gender");
+            alert("Total Genders:"+allgenders.length);
+            console.log("allgenders:---",allgenders)
+
+            for(let i=0;i<allgenders.length;i++){
+
+            allgenders[i].style.color="yellow"
+            allgenders[i].style.backgroundColor="gray"
+
+            }
+
+            }
+            </script>
+            
+        
+</body>
+</html>
